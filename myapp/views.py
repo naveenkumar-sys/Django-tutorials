@@ -11,5 +11,24 @@ def show(request):
 def index(request):
     return HttpResponse("<h1>THis is second page</h2>") #send as response and directly retun in ui
 
+# def home(request):
+#     name="Rohit"
+  
+#     return render(request,'index.html',{'name':name}) #it render the html file  
+
+
+# def home(request):
+#     context={
+#         'name':"Naveen",
+#         'age':20,
+#         'subject':'Django'
+#     }
+#     return render(request,'index.html',context)  # here we pass the python dictionary but we access in index.hmtl directly variable name , django will automatically break data into 'name':Naveen so we can access directly
+
 def home(request):
-    return render(request,'index.html') #it render the html file  
+    context={
+        'name':"Naveen",
+        'age':20,
+        'subject':'Django'
+    }
+    return render(request,'index.html',{'context':context})  #here we directly send as json if we want to access in index.html like context.name , context.age

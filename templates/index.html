@@ -1,12 +1,21 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- to load the static file in my app  -->
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- in href we call the static file and inside that css folder and inside of css folder we call the style.css -->
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+
     <title>Document</title>
 </head>
 <body>
-    <h1>Home page</h1>
+    <!-- <h1>Welcome {{name}}</h1>  which is directly access in index.html -->
+    <!-- <h1>{{age}}</h1> -->
+     <h1>welcome {{context.name}} !</h1>
+     <h2>His age is {{context.age}}</h2>
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTtKbdn_XeE5DynOcVzcrg5al58k_ditbnDygnFfIc3cQl71hIej8TuHM&s=10" alt="image" srcset="">
 </body>
 </html>
