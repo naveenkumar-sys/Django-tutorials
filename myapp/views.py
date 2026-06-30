@@ -5,11 +5,11 @@ from django.http import HttpResponse
 #here HTTP request is the request that is sent from the browser to the server and automatically visible in ui
 
 def show(request):
-    return HttpResponse("<h1>Welcome to my Django tutorial</h1>")
+    return HttpResponse("<h1>Welcome to my Django tutorial</h1>") #send as response and directly retun in ui
 
 
 def index(request):
-    return HttpResponse("<h1>THis is second page</h2>")
+    return HttpResponse("<h1>THis is second page</h2>") #send as response and directly retun in ui
 
 def home(request):
-    return render(request,'index.html')
+    return render(request,'index.html') #it render the html file  

@@ -20,5 +20,5 @@ from django.urls import path , include
 #decide the each app will run on which port
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('myapp.urls')),
+    path('',include('myapp.urls')), # inisde my app we user urls file , that subset of the myapp is rooted as home page
 ]
