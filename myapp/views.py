@@ -10,3 +10,6 @@ def show(request):
 
 def index(request):
     return HttpResponse("<h1>THis is second page</h2>")
+
+def home(request):
+    return render(request,'index.html')
